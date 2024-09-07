@@ -1,15 +1,13 @@
-import React, { ReactNode } from 'react';
-import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 
+import { PatientInfoVisibility } from '../../types/PatientInfoVisibility';
+import HeaderPatientInfo from '../HeaderPatientInfo';
+import Icon from '../Icon';
 import NavBar from '../NavBar';
 import Svg from '../Svg';
-import Icon from '../Icon';
-import IconButton from '../IconButton';
-import Dropdown from '../Dropdown';
-import HeaderPatientInfo from '../HeaderPatientInfo';
-import { PatientInfoVisibility } from '../../types/PatientInfoVisibility';
 
 function Header({
   children,
@@ -73,7 +71,7 @@ function Header({
           )}
           <div className="border-primary-dark mx-1.5 h-[25px] border-r"></div>
           <div className="flex-shrink-0">
-            <Dropdown
+            {/* <Dropdown
               id="options"
               showDropdownIcon={false}
               list={menuOptions}
@@ -88,7 +86,7 @@ function Header({
               >
                 <Icon name="icon-settings" />
               </IconButton>
-            </Dropdown>
+            </Dropdown> */}
           </div>
         </div>
       </div>

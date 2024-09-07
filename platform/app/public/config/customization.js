@@ -92,7 +92,7 @@ window.config = {
         singlepart: 'video,thumbnail,pdf',
         omitQuotationForMultipartRequest: true,
         bulkDataURI: {
-          enabled: true,
+          enabled: false,
           relativeResolution: 'studies',
         },
       },

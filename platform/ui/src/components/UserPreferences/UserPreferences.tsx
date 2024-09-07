@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import Button, { ButtonEnums } from '../Button';
 import Select from '../Select';
 import Typography from '../Typography';
-import Button from '../Button';
-import HotkeysPreferences from '../HotkeysPreferences';
-import { ButtonEnums } from '../Button';
 
 const UserPreferences = ({
   availableLanguages,
@@ -81,7 +79,7 @@ const UserPreferences = ({
 
   return (
     <>
-      <Section title={t('General')}>
+      <Section title={t('Geral')}>
         <div className="flex w-72 flex-row items-center justify-center">
           <Typography
             variant="subtitle"
@@ -97,7 +95,7 @@ const UserPreferences = ({
           />
         </div>
       </Section>
-      <Section title={t('Hotkeys')}>
+      {/* <Section title={t('Hotkeys')}>
         <HotkeysPreferences
           disabled={disabled}
           hotkeyDefinitions={state.hotkeyDefinitions}
@@ -105,15 +103,15 @@ const UserPreferences = ({
           errors={state.hotkeyErrors}
           hotkeysModule={hotkeysModule}
         />
-      </Section>
+      </Section> */}
       <div className="flex flex-row justify-between">
-        <Button
+        {/* <Button
           type={ButtonEnums.type.secondary}
           onClick={onResetHandler}
           disabled={disabled}
         >
           {t('Reset to defaults')}
-        </Button>
+        </Button> */}
         <div className="flex flex-row">
           <Button
             type={ButtonEnums.type.secondary}
@@ -133,8 +131,6 @@ const UserPreferences = ({
     </>
   );
 };
-
-const noop = () => {};
 
 UserPreferences.propTypes = {
   disabled: PropTypes.bool,

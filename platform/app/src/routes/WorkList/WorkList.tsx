@@ -1,34 +1,33 @@
-import React, { useState, useEffect, useMemo } from 'react';
 import classnames from 'classnames';
-import PropTypes, { object } from 'prop-types';
-import { Link, useNavigate } from 'react-router-dom';
-import moment from 'moment';
-import qs from 'query-string';
 import isEqual from 'lodash.isequal';
+import moment from 'moment';
+import PropTypes from 'prop-types';
+import qs from 'query-string';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link, useNavigate } from 'react-router-dom';
 //
-import filtersMeta from './filtersMeta.js';
-import { useAppConfig } from '@state';
 import { useDebounce, useSearchParams } from '@hooks';
-import { utils, hotkeys } from '@ohif/core';
+import { hotkeys, utils } from '@ohif/core';
+import { useAppConfig } from '@state';
+import filtersMeta from './filtersMeta.js';
 
 import {
-  Icon,
-  StudyListExpandedRow,
-  EmptyStudies,
-  StudyListTable,
-  StudyListPagination,
-  StudyListFilter,
-  TooltipClipboard,
-  Header,
-  useModal,
   AboutModal,
-  UserPreferences,
-  LoadingIndicatorProgress,
-  useSessionStorage,
-  InvestigationalUseDialog,
   Button,
   ButtonEnums,
+  EmptyStudies,
+  Header,
+  Icon,
+  LoadingIndicatorProgress,
+  StudyListExpandedRow,
+  StudyListFilter,
+  StudyListPagination,
+  StudyListTable,
+  TooltipClipboard,
+  useModal,
+  UserPreferences,
+  useSessionStorage
 } from '@ohif/ui';
 
 import { Types } from '@ohif/ui';
@@ -534,7 +533,7 @@ function WorkList({
         WhiteLabeling={appConfig.whiteLabeling}
         showPatientInfo={PatientInfoVisibility.DISABLED}
       />
-      <InvestigationalUseDialog dialogConfiguration={appConfig?.investigationalUseDialog} />
+      {/* <InvestigationalUseDialog dialogConfiguration={appConfig?.investigationalUseDialog} /> */}
       <div className="ohif-scrollbar ohif-scrollbar-stable-gutter flex grow flex-col overflow-y-auto sm:px-5">
         <StudyListFilter
           numOfStudies={pageNumber * resultsPerPage > 100 ? 101 : numOfStudies}

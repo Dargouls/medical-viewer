@@ -47,23 +47,23 @@ const isI18nStaging = process.env.I18N_STAGING === 'true';
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'OHIF',
-  tagline: 'Open-source web-based medical imaging platform',
-  organizationName: 'Open Health Imaging Foundation',
-  projectName: 'OHIF',
+  title: 'DiagnoVision',
+  tagline: 'DiagnoVision',
+  organizationName: 'DiagnoVision',
+  projectName: 'DiagnoVision',
   baseUrl,
   baseUrlIssueBanner: true,
   url: 'https://docs.ohif.org',
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: 'pt',
     locales: isDeployPreview
       ? // Deploy preview: keep it fast!
-        ['en']
+        ['pt']
       : isI18nStaging
         ? // Staging locales: https://docusaurus-i18n-staging.netlify.app/
-          ['en']
+          ['pt']
         : // Production locales
-          ['en'],
+          ['pt'],
   },
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -263,7 +263,7 @@ module.exports = {
         },
       },
       colorMode: {
-        defaultMode: 'dark',
+        defaultMode: 'light',
         disableSwitch: false,
         // respectPrefersColorScheme: true,
       },
@@ -295,8 +295,8 @@ module.exports = {
         hideOnScroll: false,
         logo: {
           alt: 'OHIF Logo',
-          src: 'img/ohif-logo-light.svg',
-          srcDark: 'img/ohif-logo.svg',
+          src: 'img/cruz.png',
+          srcDark: 'img/cruz.png',
         },
         items: [
           {
@@ -364,7 +364,7 @@ module.exports = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: ' ',
@@ -432,7 +432,7 @@ module.exports = {
           },
         ],
         logo: {
-          alt: 'OHIF ',
+          alt: 'DiagnoVision ',
           src: 'img/netlify-color-accent.svg',
           href: 'https://viewer.ohif.org/',
         },

@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
+import React, { useCallback, useEffect, useState } from 'react';
 
-import { ErrorBoundary, LoadingIndicatorProgress, InvestigationalUseDialog } from '@ohif/ui';
-import { HangingProtocolService, CommandsManager } from '@ohif/core';
+import { CommandsManager, HangingProtocolService } from '@ohif/core';
+import { ErrorBoundary, LoadingIndicatorProgress } from '@ohif/ui';
 import { useAppConfig } from '@state';
-import ViewerHeader from './ViewerHeader';
 import SidePanelWithServices from '../Components/SidePanelWithServices';
+import ViewerHeader from './ViewerHeader';
 
 function ViewerLayout({
   // From Extension Module Params
@@ -156,7 +156,6 @@ function ViewerLayout({
         </React.Fragment>
       </div>
 
-      <InvestigationalUseDialog dialogConfiguration={appConfig?.investigationalUseDialog} />
     </div>
   );
 }

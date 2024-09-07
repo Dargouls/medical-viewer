@@ -3,7 +3,7 @@ import i18n from 'i18next';
 const filtersMeta = [
   {
     name: 'patientName',
-    displayName: i18n.t('StudyList:PatientName'),
+    displayName: i18n.t('StudyList:Nome do paciente'),
     inputType: 'Text',
     isSortable: true,
     gridCol: 4,
@@ -17,21 +17,21 @@ const filtersMeta = [
   },
   {
     name: 'studyDate',
-    displayName: i18n.t('StudyList:StudyDate'),
+    displayName: i18n.t('StudyList:Data do estudo'),
     inputType: 'DateRange',
     isSortable: true,
     gridCol: 5,
   },
   {
     name: 'description',
-    displayName: i18n.t('StudyList:Description'),
+    displayName: i18n.t('StudyList:Descrição'),
     inputType: 'Text',
     isSortable: true,
     gridCol: 4,
   },
   {
     name: 'modalities',
-    displayName: i18n.t('StudyList:Modality'),
+    displayName: i18n.t('StudyList:Modalidade'),
     inputType: 'MultiSelect',
     inputProps: {
       options: [
@@ -112,14 +112,14 @@ const filtersMeta = [
   },
   {
     name: 'accession',
-    displayName: i18n.t('StudyList:AccessionNumber'),
+    displayName: i18n.t('StudyList:Número de adesão'),
     inputType: 'Text',
     isSortable: true,
     gridCol: 3,
   },
   {
     name: 'instances',
-    displayName: i18n.t('StudyList:Instances'),
+    displayName: i18n.t('StudyList:Instâncias'),
     inputType: 'None',
     isSortable: false,
     gridCol: 2,

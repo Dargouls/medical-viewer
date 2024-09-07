@@ -1,9 +1,9 @@
 {
-  "name": "OHIF Viewer",
-  "short_name": "Viewer",
-  "description": "OHIF Viewer",
+  "name": "DiagnoVision",
+  "short_name": "DiagnoVision",
+  "description": "DiagnoVision",
   "dir": "auto",
-  "lang": "en-US",
+  "lang": "pt_BR",
   "orientation": "any",
   "icons": [
     {

@@ -87,6 +87,7 @@
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.13.0",
     "prettier": "^3.3.2",
+    "prettier-plugin-organize-imports": "^4.0.0",
     "prettier-plugin-tailwindcss": "^0.6.5"
   },
   "husky": {

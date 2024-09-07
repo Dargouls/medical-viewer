@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { Icon } from '@ohif/ui';
 import { utils } from '@ohif/core';
+import { Icon } from '@ohif/ui';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import { PatientInfoVisibility } from '../../types';
 
 const { formatDate, formatPN } = utils;
@@ -116,7 +116,7 @@ function HeaderPatientInfo({ servicesManager, appConfig }: withAppTypes) {
         ) : (
           <div className="text-primary-active self-center text-[13px]">
             {' '}
-            {isMixedPatients ? 'Multiple Patients' : 'Patient'}
+            {isMixedPatients ? 'Múltiplos pacientes' : 'Paciente'}
           </div>
         )}
       </div>

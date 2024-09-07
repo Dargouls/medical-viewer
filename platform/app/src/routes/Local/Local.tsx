@@ -1,14 +1,14 @@
-import React, { useEffect, useRef } from 'react';
-import classnames from 'classnames';
-import { useNavigate } from 'react-router-dom';
 import { DicomMetadataStore, MODULE_TYPES } from '@ohif/core';
+import classnames from 'classnames';
+import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Dropzone from 'react-dropzone';
 import filesToStudies from './filesToStudies';
 
 import { extensionManager } from '../../App.tsx';
 
-import { Icon, Button, LoadingIndicatorProgress } from '@ohif/ui';
+import { Button, Icon, LoadingIndicatorProgress } from '@ohif/ui';
 
 const getLoadButton = (onDrop, text, isDir) => {
   return (
@@ -126,10 +126,9 @@ function Local({ modePath }: LocalProps) {
           <div className="flex h-screen w-screen items-center justify-center ">
             <div className="bg-secondary-dark mx-auto space-y-2 rounded-lg py-8 px-8 drop-shadow-md">
               <div className="flex items-center justify-center">
-                <Icon
-                  name="logo-dark-background"
-                  className="h-28"
-                />
+                <div className='border-dashed border-8 border-primary-active text-white font-semibold p-8'>
+                  Solte uma pasta aqui para carregar os arquivos
+                </div>
               </div>
               <div className="space-y-2 pt-4 text-center">
                 {dropInitiated ? (
@@ -139,19 +138,15 @@ function Local({ modePath }: LocalProps) {
                 ) : (
                   <div className="space-y-2">
                     <p className="text-base text-blue-300">
-                      Note: You data is not uploaded to any server, it will stay in your local
-                      browser application
+                      Nota: Esses dados não serão armazenados, essa é apenas uma versão de demonstração
                     </p>
-                    <p className="text-xg text-primary-active pt-6 font-semibold">
-                      Drag and Drop DICOM files here to load them in the Viewer
-                    </p>
-                    <p className="text-lg text-blue-300">Or click to </p>
+                    <p className="text-lg text-blue-300">Ou clique aqui:</p>
                   </div>
                 )}
               </div>
               <div className="flex justify-around pt-4 ">
-                {getLoadButton(onDrop, 'Load files', false)}
-                {getLoadButton(onDrop, 'Load folders', true)}
+                {getLoadButton(onDrop, 'Carregar arquivo', false)}
+                {getLoadButton(onDrop, 'Carregar pasta', true)}
               </div>
             </div>
           </div>

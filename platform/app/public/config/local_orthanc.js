@@ -7,7 +7,7 @@ window.config = {
     dicomUploadComponent:
       '@ohif/extension-cornerstone.customizationModule.cornerstoneDicomUploadComponent',
   },
-  showStudyList: true,
+  showStudyList: false,
   maxNumberOfWebWorkers: 3,
   showLoadingIndicator: true,
   showWarningMessageForCrossOrigin: true,
@@ -35,7 +35,7 @@ window.config = {
         dicomUploadEnabled: true,
         omitQuotationForMultipartRequest: true,
         bulkDataURI: {
-          enabled: true,
+          enabled: false,
           // This is an example config that can be used to fix the retrieve URL
           // where it has the wrong prefix (eg a canned prefix).  It is better to
           // just use the correct prefix out of the box, but that is sometimes hard

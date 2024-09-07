@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import LegacyButton from '../LegacyButton';
 import LegacyButtonGroup from '../LegacyButtonGroup';
-import Typography from '../Typography';
 import Select from '../Select';
+import Typography from '../Typography';
 
 const StudyListPagination = ({ onChangePage, currentPage, perPage, onChangePerPage }) => {
   const { t } = useTranslation('StudyList');
@@ -43,12 +43,12 @@ const StudyListPagination = ({ onChangePage, currentPage, perPage, onChangePerPa
               hideSelectedOptions={true}
               onChange={onSelectedRange}
             />
-            <Typography className="text-base opacity-60">{t('Results per page')}</Typography>
+            <Typography className="text-base opacity-60">{t('Resultados por página')}</Typography>
           </div>
           <div className="">
             <div className="flex items-center">
               <Typography className="mr-4 text-base opacity-60">
-                {t('Page')} {currentPage}
+                {t('Página')} {currentPage}
               </Typography>
               {/* TODO Revisit design of LegacyButtonGroup later - for now use LegacyButton for its children.*/}
               <LegacyButtonGroup>
@@ -70,7 +70,7 @@ const StudyListPagination = ({ onChangePage, currentPage, perPage, onChangePerPa
                   variant="outlined"
                   onClick={() => navigateToPage(currentPage - 1)}
                 >
-                  {t('Previous')}
+                  {t('Anterior')}
                 </LegacyButton>
                 <LegacyButton
                   size="initial"
@@ -80,7 +80,7 @@ const StudyListPagination = ({ onChangePage, currentPage, perPage, onChangePerPa
                   variant="outlined"
                   onClick={() => navigateToPage(currentPage + 1)}
                 >
-                  {t('Next')}
+                  {t('Próximo')}
                 </LegacyButton>
               </LegacyButtonGroup>
             </div>

@@ -1,11 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import LegacyButton from '../LegacyButton';
+import Button from '../Button';
 import Icon from '../Icon';
-import Typography from '../Typography';
 import InputGroup from '../InputGroup';
+import LegacyButton from '../LegacyButton';
+import Typography from '../Typography';
 
 const StudyListFilter = ({
   filtersMeta,
@@ -28,6 +29,10 @@ const StudyListFilter = ({
   };
   const isSortingEnabled = numOfStudies > 0 && numOfStudies <= 100;
 
+  useEffect(() => {
+    console.log(onUploadClick);
+  }, []);
+
   return (
     <React.Fragment>
       <div>
@@ -39,7 +44,7 @@ const StudyListFilter = ({
                   variant="h6"
                   className="text-white"
                 >
-                  {t('StudyList')}
+                  {t('Lista de estudos')}
                 </Typography>
                 {getDataSourceConfigurationComponent && getDataSourceConfigurationComponent()}
                 {onUploadClick && (
@@ -67,11 +72,17 @@ const StudyListFilter = ({
                     {t('ClearFilters')}
                   </LegacyButton>
                 )}
+                <a href="/localBasic">
+                <Button className='mr-8'>
+                  Visualizar caso
+                </Button>
+                </a>
+
                 <Typography
                   variant="h6"
                   className="text-primary-light"
                 >
-                  {`${t('Number of studies')}: `}
+                  {`${t('Número de estudos')}: `}
                 </Typography>
                 <Typography
                   variant="h6"
@@ -99,7 +110,9 @@ const StudyListFilter = ({
         {numOfStudies > 100 && (
           <div className="container m-auto">
             <div className="bg-primary-main rounded-b py-1 text-center text-base">
-              <p className="text-white">{t('Filter list to 100 studies or less to enable sorting')}</p>
+              <p className="text-white">
+                {t('Filter list to 100 studies or less to enable sorting')}
+              </p>
             </div>
           </div>
         )}

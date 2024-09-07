@@ -13,4 +13,4 @@ const getMockedStudies = (items = 50) => {
   return new Array(num).fill(studyListMock.studies[0]);
 };
 
-export default getMockedStudies;
+// export default getMockedStudies;

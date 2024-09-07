@@ -4,4 +4,4 @@ const utils = { getMockedStudies };
 
 export { getMockedStudies };
 
-export default utils;
+// export default utils;
