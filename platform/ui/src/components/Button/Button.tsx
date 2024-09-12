@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import * as ButtonEnums from './ButtonEnums';
+import PropTypes from 'prop-types';
+import React, { useRef } from 'react';
 import Tooltip from '../Tooltip/Tooltip';
+import * as ButtonEnums from './ButtonEnums';
 
 const sizeClasses = {
   [ButtonEnums.size.small]: 'h-[26px] text-[13px]',
@@ -24,15 +24,15 @@ const baseEnabledEffectClasses = 'transition duration-300 ease-in-out focus:outl
 const enabledEffectClasses = {
   [ButtonEnums.type.primary]: classnames(
     baseEnabledEffectClasses,
-    'hover:bg-customblue-80 active:bg-customblue-40'
+    'hover:brightness-80 active:bg-customblue-40'
   ),
   [ButtonEnums.type.secondary]: classnames(
     baseEnabledEffectClasses,
-    'hover:bg-customblue-50 active:bg-customblue-20'
+    'hover:brightness-80 active:bg-customblue-20'
   ),
 };
 
-const baseEnabledClasses = 'text-white';
+const baseEnabledClasses = 'text-black';
 
 const enabledClasses = {
   [ButtonEnums.type.primary]: classnames(
@@ -47,7 +47,7 @@ const enabledClasses = {
   ),
 };
 
-const disabledClasses = 'bg-inputfield-placeholder text-common-light cursor-default';
+const disabledClasses = 'bg-inputfield-placeholder text-secondary-dark cursor-default';
 
 const defaults = {
   color: 'default',

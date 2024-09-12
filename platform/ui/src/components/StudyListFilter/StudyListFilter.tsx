@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-
 import Button from '../Button';
 import Icon from '../Icon';
 import InputGroup from '../InputGroup';
@@ -73,16 +72,14 @@ const StudyListFilter = ({
                   </LegacyButton>
                 )}
                 <a href="/localBasic">
-                <Button className='mr-8'>
-                  Visualizar caso
-                </Button>
+                  <Button className="mr-8">Visualizar estudo</Button>
                 </a>
 
                 <Typography
                   variant="h6"
                   className="text-primary-light"
                 >
-                  {`${t('Número de estudos')}: `}
+                  {`${t('N° de estudos')}: `}
                 </Typography>
                 <Typography
                   variant="h6"

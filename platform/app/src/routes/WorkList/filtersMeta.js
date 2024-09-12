@@ -112,7 +112,7 @@ const filtersMeta = [
   },
   {
     name: 'accession',
-    displayName: i18n.t('StudyList:Número de adesão'),
+    displayName: i18n.t('StudyList:N° de adesão'),
     inputType: 'Text',
     isSortable: true,
     gridCol: 3,
