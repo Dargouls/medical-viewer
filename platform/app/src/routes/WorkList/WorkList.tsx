@@ -140,7 +140,7 @@ function WorkList({
       localStorage.setItem('e363401f-fc7c-4b22-a431-170552cc9817', 'true');
     }
     if (!localStorage.getItem('e363401f-fc7c-4b22-a431-170552cc9817')) {
-      window.location.href = process.env.REACT_APP_LOGIN_URL || '/';
+      window.location.href = 'https://login-manager.vercel.app';
       console.log('nao autenticado');
     }
   }, []);
@@ -447,7 +447,7 @@ function WorkList({
   });
 
   const hasStudies = numOfStudies > 0;
-  const versionNumber = 'https://login-manager.vercel.app';
+  const versionNumber = process.env.VERSION_NUMBER;
   const commitHash = process.env.COMMIT_HASH;
 
   const menuOptions = [
