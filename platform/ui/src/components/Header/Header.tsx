@@ -4,14 +4,16 @@ import React, { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { PatientInfoVisibility } from '../../types/PatientInfoVisibility';
+import Dropdown from '../Dropdown';
 import HeaderPatientInfo from '../HeaderPatientInfo';
 import Icon from '../Icon';
 import NavBar from '../NavBar';
 import Svg from '../Svg';
 
+import { User } from 'lucide-react';
+
 function Header({
   children,
-  menuOptions,
   isReturnEnabled = true,
   onClickReturnButton,
   isSticky = false,
@@ -23,6 +25,19 @@ function Header({
   ...props
 }: withAppTypes): ReactNode {
   const { t } = useTranslation('Header');
+
+  const handleLogout = () => {
+    localStorage.removeItem('e363401f-fc7c-4b22-a431-170552cc9817');
+    window.location.href = '/';
+  };
+
+  const menuOptions = [
+    {
+      title: t('Sair'),
+      icon: '',
+      onClick: () => handleLogout(),
+    },
+  ];
 
   // TODO: this should be passed in as a prop instead and the react-router-dom
   // dependency should be dropped
@@ -37,7 +52,7 @@ function Header({
       isSticky={isSticky}
       {...props}
     >
-      <div className="relative h-[48px] items-center ">
+      <div className="relative h-[48px] items-center">
         <div className="absolute left-0 top-1/2 flex -translate-y-1/2 items-center">
           <div
             className={classNames(
@@ -58,7 +73,7 @@ function Header({
             </div>
           </div>
         </div>
-        <div className="absolute top-1/2 left-[250px]  h-8 -translate-y-1/2">{Secondary}</div>
+        <div className="absolute top-1/2 left-[250px] h-8 -translate-y-1/2">{Secondary}</div>
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
           <div className="flex items-center justify-center space-x-2">{children}</div>
         </div>
@@ -71,13 +86,16 @@ function Header({
           )}
           <div className="border-primary-dark mx-1.5 h-[25px] border-r"></div>
           <div className="flex-shrink-0">
-            {/* <Dropdown
+            <Dropdown
               id="options"
               showDropdownIcon={false}
               list={menuOptions}
               alignment="right"
             >
-              <IconButton
+              <div className="bg-primary-main rounded-full p-2">
+                <User />
+              </div>
+              {/* <IconButton
                 id={'options-settings-icon'}
                 variant="text"
                 color="inherit"
@@ -85,8 +103,8 @@ function Header({
                 className="text-primary-active hover:bg-primary-dark h-full w-full"
               >
                 <Icon name="icon-settings" />
-              </IconButton>
-            </Dropdown> */}
+              </IconButton> */}
+            </Dropdown>
           </div>
         </div>
       </div>

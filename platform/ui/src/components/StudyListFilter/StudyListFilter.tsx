@@ -68,7 +68,7 @@ const StudyListFilter = ({
                     startIcon={<Icon name="cancel" />}
                     onClick={clearFilters}
                   >
-                    {t('ClearFilters')}
+                    {t('Limpar filtros')}
                   </LegacyButton>
                 )}
                 <a href="/localBasic">
@@ -79,7 +79,7 @@ const StudyListFilter = ({
                   variant="h6"
                   className="text-primary-light"
                 >
-                  {`${t('N° de estudos')}: `}
+                  {`${t('N° de estudos')}: `}
                 </Typography>
                 <Typography
                   variant="h6"

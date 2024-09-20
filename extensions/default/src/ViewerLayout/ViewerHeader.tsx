@@ -106,7 +106,6 @@ function ViewerHeader({
 
   return (
     <Header
-      menuOptions={menuOptions}
       isReturnEnabled={!!appConfig.showStudyList}
       onClickReturnButton={onClickReturnButton}
       WhiteLabeling={appConfig.whiteLabeling}

@@ -131,7 +131,7 @@ module.exports = (env, argv) => {
           PUBLIC_URL: PUBLIC_URL,
         },
       }),
-      new webpack.HotModuleReplacementPlugin(),
+      // new webpack.HotModuleReplacementPlugin(),
       isProdBuild &&
         new InjectManifest({
           swDest: 'sw.js',
@@ -151,9 +151,16 @@ module.exports = (env, argv) => {
       // compress: true,
       // http2: true,
       // https: true,
+      // headers: { 'Access-Control-Allow-Origin': '*' },
+      // https: false,
+      // allowedHosts: 'all',
       open: true,
       port: OHIF_PORT,
       hot: true,
+      // watchFiles: [
+      //   path.resolve(__dirname, 'platform/app/**/*'),
+      //   path.resolve(__dirname, 'platform/ui/**/*'),
+      // ],
       client: {
         overlay: { errors: true, warnings: false },
       },

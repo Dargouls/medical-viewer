@@ -1,13 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import getGridWidthClass from '../../utils/getGridWidthClass';
 
 import Icon from '../Icon';
 
-const StudyListTableRow = props => {
-  const { tableData } = props;
+interface StudyListTableRowProps {
+  tableData: any;
+}
+
+const StudyListTableRow = ({ tableData }: StudyListTableRowProps) => {
   const { row, expandedContent, onClickRow, isExpanded, dataCY, clickableCY } = tableData;
+
   return (
     <>
       <tr
