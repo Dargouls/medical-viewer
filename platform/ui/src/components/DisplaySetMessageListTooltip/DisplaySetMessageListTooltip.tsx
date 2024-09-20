@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import PortalTooltip from '../Tooltip/PortalTooltip';
-import Icon from '../Icon';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import Icon from '../Icon';
+import PortalTooltip from '../Tooltip/PortalTooltip';
 
 /**
  * Displays a tooltip with a list of messages of a displaySet
@@ -31,7 +31,7 @@ const DisplaySetMessageListTooltip = ({ messages, id }): React.ReactNode => {
         >
           <div className="bg-primary-dark border-secondary-light max-w-64 rounded border text-left text-base text-white">
             <div
-              className="break-normal text-base font-bold text-blue-300"
+              className="break-normal text-base font-bold text-white"
               style={{
                 marginLeft: '12px',
                 marginTop: '12px',

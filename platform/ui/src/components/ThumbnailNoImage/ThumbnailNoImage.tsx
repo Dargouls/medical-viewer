@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { useDrag } from 'react-dnd';
+import DisplaySetMessageListTooltip from '../DisplaySetMessageListTooltip';
 import Icon from '../Icon';
 import Tooltip from '../Tooltip';
 import Typography from '../Typography';
-import DisplaySetMessageListTooltip from '../DisplaySetMessageListTooltip';
 
 const ThumbnailNoImage = ({
   displaySetInstanceUID,
@@ -46,7 +46,7 @@ const ThumbnailNoImage = ({
   return (
     <div
       className={classnames(
-        'flex flex-1 cursor-pointer select-none flex-row rounded outline-none hover:border-blue-300 focus:border-blue-300',
+        'flex flex-1 cursor-pointer select-none flex-row rounded outline-none hover:border-white focus:border-white',
         isActive ? 'border-primary-light border-2' : 'border border-transparent'
       )}
       style={{
@@ -76,7 +76,7 @@ const ThumbnailNoImage = ({
             >
               <div
                 className={classnames(
-                  'rounded-sm px-3  text-lg',
+                  'rounded-sm px-3 text-lg',
                   isHydratedForDerivedDisplaySet
                     ? 'bg-primary-light text-black'
                     : 'bg-primary-main text-white'
@@ -85,7 +85,7 @@ const ThumbnailNoImage = ({
                 {modality}
               </div>
             </Tooltip>
-            <span className="ml-4 text-base text-blue-300">{seriesDate}</span>
+            <span className="ml-4 text-base text-white">{seriesDate}</span>
             <DisplaySetMessageListTooltip
               messages={messages}
               id={`display-set-tooltip-${displaySetInstanceUID}`}

@@ -123,10 +123,10 @@ function Local({ modePath }: LocalProps) {
           {...getRootProps()}
           style={{ width: '100%', height: '100%' }}
         >
-          <div className="flex h-screen w-screen items-center justify-center ">
+          <div className="flex h-screen w-screen items-center justify-center">
             <div className="bg-secondary-dark mx-auto space-y-2 rounded-lg py-8 px-8 drop-shadow-md">
               <div className="flex items-center justify-center">
-                <div className='border-dashed border-8 border-primary-active text-white font-semibold p-8'>
+                <div className="border-primary-active border-8 border-dashed p-8 font-semibold text-white">
                   Solte uma pasta aqui para carregar os arquivos
                 </div>
               </div>
@@ -137,14 +137,15 @@ function Local({ modePath }: LocalProps) {
                   </div>
                 ) : (
                   <div className="space-y-2">
-                    <p className="text-base text-blue-300">
-                      Nota: Esses dados não serão armazenados, essa é apenas uma versão de demonstração
+                    <p className="text-base text-blue-100">
+                      Nota: Esses dados não serão armazenados, essa é apenas uma versão de
+                      demonstração
                     </p>
-                    <p className="text-lg text-blue-300">Ou clique aqui:</p>
+                    <p className="text-lg text-blue-100">Ou clique aqui:</p>
                   </div>
                 )}
               </div>
-              <div className="flex justify-around pt-4 ">
+              <div className="flex justify-around pt-4">
                 {getLoadButton(onDrop, 'Carregar arquivo', false)}
                 {getLoadButton(onDrop, 'Carregar pasta', true)}
               </div>

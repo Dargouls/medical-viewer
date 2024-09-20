@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { useDrag } from 'react-dnd';
-import Icon from '../Icon';
 import { StringNumber } from '../../types';
 import DisplaySetMessageListTooltip from '../DisplaySetMessageListTooltip';
+import Icon from '../Icon';
 
 /**
  * Display a thumbnail for a display set.
@@ -70,7 +70,7 @@ const Thumbnail = ({
             'flex h-32 flex-1 items-center justify-center overflow-hidden rounded-md bg-black text-base text-white',
             isActive
               ? 'border-primary-light border-2'
-              : 'border-secondary-light border hover:border-blue-300'
+              : 'border-secondary-light border hover:border-white'
           )}
         >
           {imageSrc ? (
@@ -84,7 +84,7 @@ const Thumbnail = ({
             <div>{imageAltText}</div>
           )}
         </div>
-        <div className="flex flex-1 flex-row items-center pt-2 text-base text-blue-300">
+        <div className="flex flex-1 flex-row items-center pt-2 text-base text-white">
           <div className="mr-4">
             <span className="text-primary-main font-bold">{'S: '}</span>
             {seriesNumber}
@@ -101,14 +101,14 @@ const Thumbnail = ({
             {loadingProgress && loadingProgress === 1 && (
               <Icon
                 name={'database'}
-              className="w-3"
-            />
-          )}
-        </div>
-        <DisplaySetMessageListTooltip
-          messages={messages}
-          id={`display-set-tooltip-${displaySetInstanceUID}`}
-        />
+                className="w-3"
+              />
+            )}
+          </div>
+          <DisplaySetMessageListTooltip
+            messages={messages}
+            id={`display-set-tooltip-${displaySetInstanceUID}`}
+          />
         </div>
         <div className="break-all text-base text-white">{description}</div>
       </div>
