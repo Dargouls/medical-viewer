@@ -38,6 +38,7 @@ dotenv.config();
 const defineValues = {
   /* Application */
   'process.env.REACT_APP_LOGIN_URL': JSON.stringify(process.env.REACT_APP_LOGIN_URL),
+  'process.env.REACT_APP_DEV_MODE': JSON.stringify(process.env.REACT_APP_DEV_MODE || false),
   'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
   'process.env.NODE_DEBUG': JSON.stringify(process.env.NODE_DEBUG),
   'process.env.DEBUG': JSON.stringify(process.env.DEBUG),

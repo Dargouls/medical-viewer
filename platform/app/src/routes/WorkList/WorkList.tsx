@@ -135,12 +135,17 @@ function WorkList({
   };
 
   useEffect(() => {
+    console.log('REACT_APP_LOGIN_URL:', process.env.REACT_APP_DEV_MODE);
+
     if (searchParams.get('e363401f-fc7c-4b22-a431-170552cc9817')) {
       console.log('autenticado');
       localStorage.setItem('e363401f-fc7c-4b22-a431-170552cc9817', 'true');
     }
-    if (!localStorage.getItem('e363401f-fc7c-4b22-a431-170552cc9817')) {
-      window.location.href = 'https://login-manager.vercel.app';
+    if (
+      !localStorage.getItem('e363401f-fc7c-4b22-a431-170552cc9817') &&
+      !process.env.REACT_APP_DEV_MODE
+    ) {
+      window.location.href = process.env.REACT_APP_LOGIN_URL || 'https://login-manager.vercel.app';
       console.log('nao autenticado');
     }
   }, []);
